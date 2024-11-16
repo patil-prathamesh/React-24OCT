@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
-import axios from "axios"
 import './App.css'
+// import {Memoo} from './Memoo'
 
-let rc = 0
+import { UseRef } from './UseRef'
 
 function App() {
   // const [inputValue, setInputValue] = useState(0)
@@ -26,7 +25,8 @@ function App() {
 
   return (
     <div>
-      hii
+      {/* <UseEffect/> */}
+      <UseRef />
     </div>
     // <div>
     //   <input
@@ -48,20 +48,20 @@ function App() {
   )
 }
 
-function Todo({ id }) {
-  const [todo, setTodo] = useState({})
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
-      .then((res) => {
-        setTodo(res.data)
-        console.log(res)
-      })
-  }, [id])
-  return (
-    <div>
-      <h1>##{todo.title}</h1>
-      <h4>##{todo.body}</h4>
-    </div>
-  )
-}
+// function Todo({ id }) {
+//   const [todo, setTodo] = useState({})
+//   useEffect(() => {
+//     axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
+//       .then((res) => {
+//         setTodo(res.data)
+//         console.log(res)
+//       })
+//   }, [id])
+//   return (
+//     <div>
+//       <h1>##{todo.title}</h1>
+//       <h4>##{todo.body}</h4>
+//     </div>
+//   )
+// }
 export default App
